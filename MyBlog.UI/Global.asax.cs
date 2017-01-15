@@ -20,6 +20,14 @@ namespace MyBlog.UI
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //App Sessions , Number Of Visitor
+            Application["TotalofVisitor"] = 0;
+        }
+        protected void Session_Start()
+        {
+            Application.Lock();
+            Application["TotalofVisitor"] = (int)Application["TotalofVisitor"] + 1;
+            Application.UnLock();
         }
 
         protected void Application_PostAuthenticateRequest()
