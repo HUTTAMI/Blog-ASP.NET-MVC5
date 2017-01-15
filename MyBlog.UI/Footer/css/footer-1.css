@@ -151,6 +151,9 @@ h3.footer-heading:first-letter
 	-webkit-box-shadow: 0 0 3px#888;
 	box-shadow: 0 0 3px #888;
 }
+.myf ul.social-icons li a.github-bg:hover, .myf ul.social-icons li a.github-bg:focus {
+	background-color: #ccc;
+}
 .myf ul.social-icons li a.facebook-bg:hover, .myf ul.social-icons li a.facebook-bg:focus {
 	background-color: #344f98;
 }
