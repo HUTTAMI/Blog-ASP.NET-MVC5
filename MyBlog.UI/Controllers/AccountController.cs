@@ -2,8 +2,8 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.OAuth;
-using MyBlog.Domain.IDAL;
-using MyBlog.Domain.Model;
+using MyBlog.Data;
+using MyBlog.Service;
 using MyBlog.UI.Models;
 using Newtonsoft.Json;
 using System;

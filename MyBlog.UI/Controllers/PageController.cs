@@ -1,5 +1,5 @@
-﻿using MyBlog.Domain.IDAL;
-using MyBlog.Domain.Model;
+﻿using MyBlog.Data;
+using MyBlog.Service;
 using MyBlog.UI.Models;
 using System;
 using System.Collections.Generic;

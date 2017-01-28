@@ -1,10 +1,12 @@
-﻿using MyBlog.Domain.IDAL;
+﻿
+using MyBlog.Data;
+using MyBlog.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyBlog.Domain.Model;
+
 
 namespace MyBlog.Domain.DAL
 {

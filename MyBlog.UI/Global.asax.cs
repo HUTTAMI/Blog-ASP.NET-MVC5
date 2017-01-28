@@ -1,4 +1,5 @@
-﻿using MyBlog.Domain.Model;
+﻿
+using MyBlog.Data;
 using MyBlog.UI.App_Start;
 using MyBlog.UI.Models;
 using System;
@@ -22,6 +23,7 @@ namespace MyBlog.UI
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             //App Sessions , Number Of Visitor
             Application["TotalofVisitor"] = 0;
+           
         }
         protected void Session_Start()
         {
@@ -29,6 +31,7 @@ namespace MyBlog.UI
             Application["TotalofVisitor"] = (int)Application["TotalofVisitor"] + 1;
             Application.UnLock();
         }
+       
 
         protected void Application_PostAuthenticateRequest()
         {

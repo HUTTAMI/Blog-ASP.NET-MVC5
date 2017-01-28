@@ -3239,9 +3239,17 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyBlog.Domain\MyBlog.Domain.csproj">
-      <Project>{210A0360-7D2E-4C15-BAD9-87FF3BB52B15}</Project>
-      <Name>MyBlog.Domain</Name>
+    <ProjectReference Include="..\MyBlog.Data\MyBlog.Data.csproj">
+      <Project>{4B978661-25CE-4487-BBA0-69A7E3742901}</Project>
+      <Name>MyBlog.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBlog.Repo\MyBlog.Repo.csproj">
+      <Project>{03D6D9DB-12AD-423A-AD0F-CACD16528CD7}</Project>
+      <Name>MyBlog.Repo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBlog.Service\MyBlog.Service.csproj">
+      <Project>{29F559DE-1B41-446B-852D-4D51E09D898D}</Project>
+      <Name>MyBlog.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

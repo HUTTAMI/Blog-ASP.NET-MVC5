@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using MyBlog.Domain.Model;
+
+using MyBlog.Data;
 
 namespace MyBlog.Domain.DAL
 {

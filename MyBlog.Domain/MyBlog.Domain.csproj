@@ -67,36 +67,22 @@
     <Compile Include="DAL\FormsAuthenticationProvider.cs" />
     <Compile Include="DAL\EFMembershipProvider.cs" />
     <Compile Include="DAL\EFRoleProvider.cs" />
-    <Compile Include="IDAL\IAuthentication.cs" />
-    <Compile Include="IDAL\ICategoryRepository.cs" />
-    <Compile Include="IDAL\ICommentRepository.cs" />
-    <Compile Include="IDAL\IDEncryptionRepository.cs" />
-    <Compile Include="IDAL\IEmailSettingRepository.cs" />
-    <Compile Include="IDAL\IImageRepository.cs" />
-    <Compile Include="IDAL\IPageRepository.cs" />
-    <Compile Include="IDAL\IPostRepository.cs" />
-    <Compile Include="IDAL\ISettingRepository.cs" />
-    <Compile Include="IDAL\IUserRepository.cs" />
-    <Compile Include="IDAL\IRoleRepository.cs" />
-    <Compile Include="IDAL\IWidgetRepository.cs" />
-    <Compile Include="Model\Category.cs" />
-    <Compile Include="Model\Comment.cs" />
-    <Compile Include="Model\EmailSetting.cs" />
-    <Compile Include="Model\Image.cs" />
-    <Compile Include="Model\Page.cs" />
-    <Compile Include="Model\Post.cs" />
-    <Compile Include="Model\Role.cs" />
-    <Compile Include="Model\Setting.cs" />
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Model\UserRole.cs" />
-    <Compile Include="Model\Widget.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MyBlog.Data\MyBlog.Data.csproj">
+      <Project>{4B978661-25CE-4487-BBA0-69A7E3742901}</Project>
+      <Name>MyBlog.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBlog.Service\MyBlog.Service.csproj">
+      <Project>{29F559DE-1B41-446B-852D-4D51E09D898D}</Project>
+      <Name>MyBlog.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
