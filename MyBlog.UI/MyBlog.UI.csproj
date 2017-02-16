@@ -214,6 +214,7 @@
   <ItemGroup>
     <Content Include="Content\Gridmvc.css" />
     <Content Include="Content\jquery.mobile-1.4.5.min.css" />
+    <Content Include="Content\reveal.css" />
     <Content Include="Content\TageStyle.css" />
     <Content Include="Content\bootstrap-tagsinput-typeahead.css" />
     <Content Include="Content\bootstrap-tagsinput.css" />
@@ -3111,10 +3112,12 @@
     <Content Include="scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="scripts\jquery-ui-1.12.1.js" />
     <Content Include="scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="scripts\jquery.reveal.js" />
     <Content Include="scripts\materialize\materialize.js" />
     <Content Include="scripts\materialize\materialize.min.js" />
     <Content Include="scripts\modernizr-2.8.3.js" />
     <Content Include="scripts\MyFile.js" />
+    <Content Include="sitemap.xml" />
     <Content Include="Upload\HomePageBanner.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -3134,6 +3137,7 @@
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\SampleObject.cs" />
     <Compile Include="Controllers\SettingController.cs" />
+    <Compile Include="Controllers\SitemapController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\WidgetController.cs" />
     <Compile Include="Global.asax.cs">
@@ -3152,6 +3156,17 @@
     <Compile Include="Models\PostViewModel.cs" />
     <Compile Include="Models\RssResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SEO\Ensure.cs" />
+    <Compile Include="SEO\ISitemapGenerator.cs" />
+    <Compile Include="SEO\ISitemapItem.cs" />
+    <Compile Include="SEO\PathUtils.cs" />
+    <Compile Include="SEO\RegexUtils.cs" />
+    <Compile Include="SEO\SitemapChangeFrequency.cs" />
+    <Compile Include="SEO\SitemapGenerator.cs" />
+    <Compile Include="SEO\SitemapItem.cs" />
+    <Compile Include="SEO\SitemapResult.cs" />
+    <Compile Include="SEO\StringExtensions.cs" />
+    <Compile Include="SEO\UrlHelperExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -3237,6 +3252,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Sitemap\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyBlog.Data\MyBlog.Data.csproj">
