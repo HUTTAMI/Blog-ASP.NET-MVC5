@@ -1,0 +1,49 @@
+﻿@model MyBlog.Data.Post
+<div class="row MainPost">
+
+    <div class="col-md-12">
+        <article>
+            <header>
+                <h3>
+                    <a class="PostTitle truncateOpt" href="~/Post/Details/@Model.PostId">
+                        @Model.Title
+                    </a>
+                </h3>
+                <h6 style="font-style:italic;">
+                    by <a href="~/User/Details/@Model.UserId">
+                        @Html.Label(Model.UserDetails.FName + " " + Model.UserDetails.LName)
+                    </a>
+                </h6>
+            </header>
+
+
+            @Html.Raw(Model.Post_Content)
+
+
+
+            <footer>
+
+                <i class="fa fa-calendar" aria-hidden="true"></i> On
+                <time><small>  @Model.Create_time.ToShortDateString() </small></time>
+            </footer>
+        </article>
+
+    </div>@* End of Post row *@
+</div>@*End of Image and Post Row*@
+@*
+    <article class="row col-md-12">
+            <div class="panel panel-default">
+                <header class="panel-heading">
+                     @p.Title
+                </header>
+
+                <div class="panel-body">
+                    <p>@Html.Raw(p.Post_Content)</p>
+                </div>
+                <div class="panel-footer">
+                    Posted @p.Create_time.ToShortDateString()
+                </div>
+            </div>
+
+         </article>
+*@
