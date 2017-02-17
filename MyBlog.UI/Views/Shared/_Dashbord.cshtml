@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>My Blog - Dashboard</title>
+    @Styles.Render("~/Content/Loadme")
     <!-- Bootstrap Core CSS -->
     @Styles.Render("~/Content/BootStrap")
  
@@ -26,6 +27,16 @@
     <![endif]-->
 </head>
 <body>
+    <div id="Loading">
+        <div class="loadmeRect">
+            <div class="loadmeRectChild loadmeRect1"></div>
+            <div class="loadmeRectChild loadmeRect2"></div>
+            <div class="loadmeRectChild loadmeRect3"></div>
+            <div class="loadmeRectChild loadmeRect4"></div>
+            <div class="loadmeRectChild loadmeRect5"></div>
+        </div>
+        <div class="loadme-mask"></div>
+    </div>
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -137,18 +148,22 @@
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryui")
-   
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/ImgUploder") 
+  
   
 
 
 
-@section Scripts {
 
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/AJAX")
+    @Scripts.Render("~/bundles/LoadMeAJAX")
+    @Scripts.Render("~/bundles/jqueryui")
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/ImgUploder")
+
+    
    
     <script src="~/Scripts/clipboard.min.js"></script>
     <script src="~/Scripts/imagehideblock.js"></script>
@@ -157,8 +172,13 @@
     <script src="~/Scripts/jquery.reveal.js"></script>
 
     <script src="~/scripts/modernizr-2.8.3.js"></script>
-    }
+    <script>
+        $(document).ready(function () {
+            $("#Loading").hide();
 
+        });
+    </script>
+   
 
 </body>
 </html>

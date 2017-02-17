@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Alaeddin Alhamoud</title>
-    
+    @Styles.Render("~/Content/Loadme")
     @Styles.Render("~/Content/BootStrap")
 
     @Styles.Render("~/Content/font-awesome")
@@ -22,7 +22,16 @@
     
 </head>
 <body >
-
+    <div id="Loading">
+        <div class="loadmeRect">
+            <div class="loadmeRectChild loadmeRect1"></div>
+            <div class="loadmeRectChild loadmeRect2"></div>
+            <div class="loadmeRectChild loadmeRect3"></div>
+            <div class="loadmeRectChild loadmeRect4"></div>
+            <div class="loadmeRectChild loadmeRect5"></div>
+        </div>
+        <div class="loadme-mask"></div>
+    </div>
     <div>
 
 
@@ -121,6 +130,18 @@
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/bundles/AJAX")
+        @Scripts.Render("~/bundles/LoadMeAJAX")
+        <script>
+           
+
+            $(document).ready(function () {
+
+                $("#Loading").hide();
+
+            });
+        </script>
+       
         @Scripts.Render("~/bundles/bootstrap")
         @Scripts.Render("~/bundles/ckeditor")
         @Scripts.Render("~/bundles/modernizr")
