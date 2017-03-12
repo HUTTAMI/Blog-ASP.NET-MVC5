@@ -87,7 +87,12 @@
                                     <span>Local Comment</span>
                                     @Html.ValidationMessageFor(model => model.DisplayLocalCommentWidget, "", new { @class = "text-danger" })
                                 </div>
-
+                                <div class="col-md-3">
+                                    <i class="fa fa-fw fa-user-circle fa-2x"></i>
+                                    @Html.CheckBoxFor(model => model.DisplayRegister, new { htmlAttributes = new { @class = "form-control" } })
+                                    <span>Enable Register</span>
+                                    @Html.ValidationMessageFor(model => model.DisplayRegister, "", new { @class = "text-danger" })
+                                </div>
                                
                             </div>
                         </div>

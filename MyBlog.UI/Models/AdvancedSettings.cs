@@ -9,7 +9,7 @@ namespace MyBlog.UI.Models
 {
     public class AdvancedSettings
     {
-
+        [DisplayName("Last Category")]
         public bool DisplayLastCategory { get; set; }
         [DisplayName("Last Post")]
         public bool DisplayLastPost { get; set; }
@@ -24,8 +24,9 @@ namespace MyBlog.UI.Models
         [DisplayName("Local Comment Widget")]
         public bool DisplayLocalCommentWidget { get; set; }
         [DisplayName("FB Login")]
-
         public bool DisplayFBLogin { get; set; }
+        [DisplayName("Register")]
+        public bool DisplayRegister { get; set; }
         [DisplayName("FB App ID")]
 
         public string FBAppID { get; set; }

@@ -1,5 +1,8 @@
 ﻿@using Microsoft.AspNet.Identity
-
+@using System.Configuration;
+@{
+    string _DisplayRegister = ConfigurationManager.AppSettings["DisplayRegister"];
+ }
 @if (Request.IsAuthenticated)
 
 {
@@ -22,7 +25,7 @@ else
 {
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="~/Account/Register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li style="display:@_DisplayRegister;"><a href="~/Account/Register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="~/Account/Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
 

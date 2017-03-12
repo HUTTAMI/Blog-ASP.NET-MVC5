@@ -170,7 +170,8 @@ namespace MyBlog.UI.Controllers
             string _DisplaydisqusWidget = ReadSetting("DisplaydisqusWidget");
             string _DisplayLocalCommentWidget = ReadSetting("DisplayLocalCommentWidget");
             string _DisplayFBLogin = ReadSetting("DisplayFBLogin");
-            
+            string _DisplayRegister = ReadSetting("DisplayRegister");
+
 
             //Send it to to model
             //  Setting to Show and Hiden Widgets
@@ -208,6 +209,9 @@ namespace MyBlog.UI.Controllers
             { _AdvancedSettings.DisplayFBLogin = false; }
             else { _AdvancedSettings.DisplayFBLogin = true; }
 
+            if(_DisplayRegister=="none")
+            { _AdvancedSettings.DisplayRegister = false; }
+            else { _AdvancedSettings.DisplayRegister = true; }
             ///
 
             _AdvancedSettings.FBAppID = ReadSetting("FBAppID");
@@ -259,6 +263,12 @@ namespace MyBlog.UI.Controllers
             { _DisplayFBLogin = "none"; }
             else { _DisplayFBLogin = "block"; }
 
+            string _DisplayRegister;
+            if (obj.DisplayRegister == false)
+            { _DisplayRegister = "none"; }
+            else { _DisplayRegister = "block"; }
+
+
             if (_DisplaydisqusWidget == _DisplayLocalCommentWidget)
             {
                 TempData["message"] = string.Format("Please notice , you should Active one of the Comment Widgets.");
@@ -280,6 +290,7 @@ namespace MyBlog.UI.Controllers
             AddUpdateAppSettings("DisplaydisqusWidget", _DisplaydisqusWidget);
             AddUpdateAppSettings("DisplayLocalCommentWidget", _DisplayLocalCommentWidget);
             AddUpdateAppSettings("DisplayFBLogin", _DisplayFBLogin);
+            AddUpdateAppSettings("DisplayRegister", _DisplayRegister);
             AddUpdateAppSettings("FBAppID", obj.FBAppID);
             AddUpdateAppSettings("FBAppSecret", obj.FBAppSecret);
             AddUpdateAppSettings("GoogleSitekey", obj.GoogleSitekey);
