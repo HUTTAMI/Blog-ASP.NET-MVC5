@@ -1,8 +1,19 @@
 ﻿@model MyBlog.UI.Models.PostViewModel
 @{
-    ViewBag.Title = "PostByCategory";
+    ViewBag.Title = "Post By Category";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@using System.Configuration;
+
+@{
+  
+    string _DisplayGoogleAdv = ConfigurationManager.AppSettings["DisplayGoogleAdv"];
+
+}
+
+
+
 
 <div class="container-fluid body-content-pages">
 
@@ -48,7 +59,15 @@
                     </div>@* End of Post row *@
                 </div>@*End of Image and Post Row*@
 
+                @*Start - Google Ads *@
 
+                <div style="display:@_DisplayGoogleAdv;">
+
+                    @Html.Action("GetWidget", "Widget", new { Id = 3 })
+
+
+                </div>
+                @*End - Google Ads *@
             }
 
         </section>
@@ -58,3 +77,19 @@
     </div>@*End of section row 1*@
 
 </div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+     //to resize Images as img-reposive after erase inline css add new
+  $(document).ready(function() {
+      $('img').attr('style', 'max-width: 100%; height:auto;');
+
+  });
+    </script>
+
+
+}
+

@@ -3,10 +3,11 @@
 @using System.Configuration;
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.Title;
     string _DisplayFBLogin = ConfigurationManager.AppSettings["DisplayFBLogin"];
     string _DisplaydisqusWidget = ConfigurationManager.AppSettings["DisplaydisqusWidget"];
     string _DisplayLocalCommentWidget = ConfigurationManager.AppSettings["DisplayLocalCommentWidget"];
+    string _DisplayGoogleAdv = ConfigurationManager.AppSettings["DisplayGoogleAdv"];
 
 }
 
@@ -115,6 +116,15 @@
         <script async src="https://static.addtoany.com/menu/page.js"></script>
         <!-- AddToAny END -->
     </section>
+    @*Start - Google Ads *@
+
+    <div style="display:@_DisplayGoogleAdv;">
+
+        @Html.Action("GetWidget", "Widget", new { Id = 3 })
+
+
+    </div>
+    @*End - Google Ads *@
     <section class="container">
         @Html.Action("CommnetByPost", "Comment", new { Model.PostId })
     </section>

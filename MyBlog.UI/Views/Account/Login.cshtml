@@ -4,6 +4,7 @@
     ViewBag.Title = "Log in";
     string _googlesitekey=  ConfigurationManager.AppSettings["GoogleSitekey"];
     string _DisplayFBLogin = ConfigurationManager.AppSettings["DisplayFBLogin"];
+    string _DisplayRegister = ConfigurationManager.AppSettings["DisplayRegister"];
 }
 
 
@@ -59,7 +60,7 @@
                         </button>
                     </div>
                 </div>
-                <p>
+                <p style="display:@_DisplayRegister;">
                     @Html.ActionLink("Register as a new user", "Register")
                 </p>
                 @* Enable this once you have account confirmation enabled for password reset functionality*@

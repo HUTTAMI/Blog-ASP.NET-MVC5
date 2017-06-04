@@ -92,6 +92,7 @@ namespace MyBlog.UI.Controllers
             Post model = GetPostSession();
             model.PostId = 0;//Becouse HttpPost NewPost, Need Id to know Edit or AddNew .
             model.CategoryDetails = repositoryCategory.CategoryIEnum;
+
             return View(model);
            
         }

@@ -45,7 +45,13 @@
 
                  {
                     @Html.Partial("_MainPagePost", p)
-                 }
+
+                    @*Start - Google Ads between Posts*@
+                    <div style="display:@_DisplayGoogleAdv;">
+                        @Html.Action("GetWidget", "Widget", new { Id = 3 })
+                    </div>
+                    @*End - Google Ads between Posts*@
+                }
 
             </section>
             <div class="pagination text-center">
@@ -55,19 +61,15 @@
         <div class="col-md-2" style="padding:0 5px 0 0;">
             <aside>
                 
-
+                @*Start - Google Ads On Side*@
 
                 <div style="display:@_DisplayGoogleAdv;">
-
-                  
+                              
                          @Html.Action("GetWidget", "Widget", new { Id = 3 })
           
                 
-
-                
-
                  </div>
-
+                @*End - Google Ads On Side*@
             </aside>
         </div>@*End of aside row 3 Right Aside*@
        
