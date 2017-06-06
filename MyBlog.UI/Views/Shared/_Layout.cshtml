@@ -17,8 +17,9 @@
     @Styles.Render("~/Content/Site")
     @Styles.Render("~/Content/CSS-Footer")
     @Styles.Render("~/Content/CK-school_book")
-
+ 
    
+    
     
 </head>
 <body >
@@ -54,6 +55,23 @@
                         <li><a href="~/Page/Details/2">Projects</a></li>
                         <li><a href="~/Page/Details/1">About</a></li>
 
+                       
+
+                        <form class="navbar-form navbar-right " action="http://www.google.co.uk" id="cse-search-box"  role="search">
+                            <div class="input-group">
+                                <input type="hidden" name="cx" value="partner-pub-2337493261869888:4568312859" />
+                                <input type="hidden" name="ie" value="UTF-8" />
+                                <input type="text" name="q" size="20"  class="form-control"  />
+                               
+
+                               
+                                <div class="input-group-btn">
+                                    
+                                    <button class="btn btn-default" type="submit" name="sa"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                      
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>
@@ -151,6 +169,8 @@
         @Scripts.Render("~/bundles/MyFile")
         @Scripts.Render("~/bundles/ImgUploder") 
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script type="text/javascript" src="http://www.google.co.uk/coop/cse/brand?form=cse-search-box&amp;lang=ar"></script>
+        
         @RenderSection("scripts", required: false)
        
       
