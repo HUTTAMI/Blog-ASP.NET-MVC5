@@ -1,5 +1,9 @@
 ﻿@model MyBlog.UI.Models.RegisterViewModel
-
+@using System.Configuration;
+@{  
+  
+    string _DisplayRegister = ConfigurationManager.AppSettings["DisplayRegister"];
+}
 @{
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,6 +12,8 @@
 
 <div class="container body-content-pages">
     <h2>@ViewBag.Title.</h2>
+
+    @if (_DisplayRegister.Equals("block")) { 
     <div class="col-md-8">
         <section id="RegisterForm">
 
@@ -113,4 +119,12 @@
         @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl }) *@
         </section>
     </div>
+
+    }else
+    {
+
+       <h1><p> Sorry Register Closed !</p></h1> 
+    }
+
+
 </div>
