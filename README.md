@@ -10,3 +10,7 @@ http://www.a-hamoud.com
 
 youtube :
 https://youtu.be/_F1mM3YL3ek
+
+
+how to install it on Local IIS:
+https://youtu.be/AN-uPRKySj4
