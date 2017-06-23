@@ -124,6 +124,7 @@ namespace MyBlog.UI.Controllers
                 obj.UserId = _CurrentUserId;
                 obj.Tages = data.Tages;
                 obj.CategoryId = data.CategoryId;
+                obj.FeaturedImage = data.FeaturedImage;
                 obj.Frequence = 0;//If not 0 will be Null on DB , we cant  do Null +1 .
                 if (data.PostId == 0)
                 {

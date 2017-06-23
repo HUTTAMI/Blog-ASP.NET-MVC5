@@ -36,6 +36,9 @@ namespace MyBlog.Data
         [DisplayName("Category:")]
         public int CategoryId { get; set; }
         public int Frequence { get; set; }
+        [Required(ErrorMessage = "Featured Image is required")]
+        [DisplayName("Featured Image:")]
+        public string FeaturedImage { get; set; }
 
         public virtual User UserDetails { get; set; }
         public virtual Category CategoryDetail { get; set; }

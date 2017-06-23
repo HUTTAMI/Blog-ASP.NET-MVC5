@@ -96,6 +96,7 @@ namespace MyBlog.Repo
                 _post.UserId = post.UserId;
                 _post.Tages = post.Tages;
                 _post.CategoryId = post.CategoryId;
+                _post.FeaturedImage = post.FeaturedImage;
                 context.Posts.Add(_post);
                 context.SaveChanges();
                 post.PostId = _post.PostId;
@@ -112,6 +113,7 @@ namespace MyBlog.Repo
                     dbEntry.Update_time = post.Update_time;
                     dbEntry.Tages = post.Tages;
                     dbEntry.CategoryId = post.CategoryId;
+                    dbEntry.FeaturedImage = post.FeaturedImage;
                     context.SaveChanges();
                     
                 }
