@@ -3202,6 +3202,7 @@
     <Compile Include="SEO\ISitemapItem.cs" />
     <Compile Include="SEO\PathUtils.cs" />
     <Compile Include="SEO\RegexUtils.cs" />
+    <Compile Include="SEO\SeoFriendlyRoute.cs" />
     <Compile Include="SEO\SitemapChangeFrequency.cs" />
     <Compile Include="SEO\SitemapGenerator.cs" />
     <Compile Include="SEO\SitemapItem.cs" />

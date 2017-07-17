@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace MyBlog.Data
@@ -43,6 +44,29 @@ namespace MyBlog.Data
         public virtual User UserDetails { get; set; }
         public virtual Category CategoryDetail { get; set; }
         public virtual IEnumerable<Category> CategoryDetails { get; set; }
+
+
+        // Slug generation taken from http://stackoverflow.com/questions/2920744/url-slugify-algorithm-in-c
+        public string GenerateSlug()
+        {
+            string phrase = string.Format("{0}-{1}", PostId, Title);
+
+            string str = RemoveAccent(phrase).ToLower();
+            // invalid chars           
+            str = Regex.Replace(str, @"[^a-z0-9\s-]", "");
+            // convert multiple spaces into one space   
+            str = Regex.Replace(str, @"\s+", " ").Trim();
+            // cut and trim 
+            str = str.Substring(0, str.Length <= 45 ? str.Length : 45).Trim();
+            str = Regex.Replace(str, @"\s", "-"); // hyphens   
+            return str;
+        }
+
+        private string RemoveAccent(string text)
+        {
+            byte[] bytes = System.Text.Encoding.GetEncoding("Cyrillic").GetBytes(text);
+            return System.Text.Encoding.ASCII.GetString(bytes);
+        }
 
     }
 }

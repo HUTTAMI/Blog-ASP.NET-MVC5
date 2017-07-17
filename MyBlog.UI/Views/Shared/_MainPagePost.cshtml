@@ -5,9 +5,14 @@
         <article>
             <header>
                 <h3>
-                    <a class="PostTitle truncateOpt" href="~/Post/Details/@Model.PostId">
-                        @Model.Title
-                    </a>
+                    @*
+                        old befor change link seo 
+    <a class="PostTitle truncateOpt" href="~/Post/Details/@Model.PostId">
+        @Model.Title
+    </a>
+                    *@
+                    <a href="@Url.Action("Details", "Post", new { id = Model.GenerateSlug() })">@Model.Title</a>
+
                 </h3>
                 <h6 style="font-style:italic;">
                     by <a href="~/User/Details/@Model.UserId">
