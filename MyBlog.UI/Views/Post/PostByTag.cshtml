@@ -32,9 +32,12 @@
                         <article>
                             <header>
                                 <h3>
-                                    <a class="PostTitle truncateOpt" href="~/Post/Details/@p.PostId">
-                                        @p.Title
-                                    </a>
+                                    @*
+    <a class="PostTitle truncateOpt" href="~/Post/Details/@p.PostId">
+        @p.Title
+    </a>
+                                    *@
+                                    <a class="PostTitle truncateOpt" href="@Url.Action("Details", "Post", new { id = p.GenerateSlug() })">@p.Title</a>
                                 </h3>
                                 <h6 style="font-style:italic;">
                                     by <a href="~/User/Details/@p.UserId">

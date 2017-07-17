@@ -11,7 +11,7 @@
         @Model.Title
     </a>
                     *@
-                    <a href="@Url.Action("Details", "Post", new { id = Model.GenerateSlug() })">@Model.Title</a>
+                    <a class="PostTitle truncateOpt" href="@Url.Action("Details", "Post", new { id = Model.GenerateSlug() })">@Model.Title</a>
 
                 </h3>
                 <h6 style="font-style:italic;">

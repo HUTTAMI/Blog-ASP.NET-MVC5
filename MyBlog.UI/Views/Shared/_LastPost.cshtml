@@ -18,15 +18,17 @@
 
                     <td>
 
-                         
-                        @Html.ActionLink(item.Title, "Details", "Post",
-                   new
-                   {
-                       Id = @item.PostId,
+                        <a class="PostTitle truncateOpt" href="@Url.Action("Details", "Post", new { id = item.GenerateSlug() })">@item.Title</a>
 
-                   },
-                   new { @class = "truncateOpt" })
-    
+                         @*
+         @Html.ActionLink(item.Title, "Details", "Post",
+    new
+    {
+        Id = @item.PostId,
+
+    },
+    new { @class = "truncateOpt" })
+                        *@
                         <span class="badge" style="float:right;">@item.Frequence</span>
                     </td>
 

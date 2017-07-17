@@ -69,3 +69,13 @@ ul#sidebarnav li a:hover {
     height: 70px;
     border: 1px solid #e1e6ef;
 }
+
+ /* Not working with some browsers */ 
+.truncateOpt {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+  
