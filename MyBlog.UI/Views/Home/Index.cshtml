@@ -84,12 +84,16 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+ 
+<script src="~/scripts/jquery.dotdotdot.min.js"></script>
+
 
  <script>
      //to resize Images as img-reposive after erase inline css add new 
   $(document).ready(function() {
       $('img').attr('style', 'max-width: 100%; height:auto;');
-    
+      $('#dot3').dotdotdot();
+  
   });
 </script>
 
@@ -99,3 +103,4 @@
 
 
 
+ 
