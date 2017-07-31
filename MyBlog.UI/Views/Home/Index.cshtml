@@ -50,7 +50,7 @@
                     @Html.Partial("_MainPagePost", p)
 
                     @*Start - Google Ads between Posts*@
-                    <div style="display:@_DisplayGoogleAdv;">
+                    <div style="display:@_DisplayGoogleAdv; margin-bottom:10px;">
                         @Html.Action("GetWidget", "Widget", new { Id = 3 })
                     </div>
                     @*End - Google Ads between Posts*@
